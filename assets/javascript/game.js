@@ -22,16 +22,27 @@ function getRandomScore(){
 }
 
 function getRandomGoalScore(){
-    return Math.floor(Math.random()*(120-20))+19;
+    // return Math.floor(Math.random()*(120-20))+19;
+    return Math.floor(Math.random()*(101))+19;//19-119
+}
+
+function allReset(){
+    if(wins === 5 || losses === 5){
+        wins = 0;
+        losses = 0;
+        $("#losses").text("losses: "+losses);
+        $("#wins").text("wins: " + wins);
+    }
 }
 
 function gameReset(){
+    allReset();
     setRandomScores();
     goalScore = getRandomGoalScore();
     totalScore = 0;
     $("#totalScore").text(totalScore);//text는 jquery의 function 중 하나. html에 업데이트 
     $("#totalScore").text("Your total score is: "+ totalScore);
-    $("#goalScore").text(goalScore);
+    $("#goalScore").text("Goal Score is: " + goalScore);
 }
 
 function checkScore(){
@@ -39,7 +50,7 @@ function checkScore(){
     $("#totalScore").text("Your total score is: "+ totalScore);
     if(goalScore < totalScore){
         losses++;
-        $("#losses").text("losses: " + losses);
+        $("#losses").text("losses: "+losses);
         gameReset();
     }else if(goalScore === totalScore){
         wins++;
@@ -47,6 +58,8 @@ function checkScore(){
         gameReset();
     }
 }
+
+
 
 
 gameReset();
