@@ -1,4 +1,4 @@
-# CrystalsCollector Game
+# Week-4. CrystalsCollector Game
 
 https://grace8512.github.io/unit-4-game/
 
