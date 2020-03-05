@@ -1,5 +1,7 @@
 # CrystalsCollector Game
 
+https://grace8512.github.io/unit-4-game/
+
 <strong>How the app works:</strong>
 
   * There are four crystals displayed as buttons on the page.
@@ -17,5 +19,3 @@
   * The player loses if their score goes above the random number.
 
   * The game restarts whenever the player wins or loses.
-  
-  https://grace8512.github.io/unit-4-game/
